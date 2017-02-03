@@ -1,17 +1,22 @@
+$notice-cover-width: 500px;
+$news-author-width: 30px;
 
 
+.news-list {
 
-.notices-list{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
 
-  .notice{
+  .news {
 
-    .notice-image{
+    .news-description {
 
-    }
-    .notice-resume{
+      margin-top: 25px;
+      font-size: $font-size-large;
+      //@include text-overflow-ellipsis;
 
     }
   }
-
 
 }

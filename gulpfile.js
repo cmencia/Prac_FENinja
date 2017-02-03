@@ -74,8 +74,13 @@ var sprites = {
     imgPath: 'img/sprite.png'
 };
 
+//Importar fuentes
+gulp.task('copy-fonts', function(){
+    gulp.src(['./node_modules/bootstrap/fonts/**/*']).pipe(gulp.dest('./fonts/bootstrap'));
+});
+
 // definimos la tarea por defecto
-gulp.task("default", [sassConfig.compileSassTaskName, jsConfig.concatJsTaskName/*, imagesConfig.imagesTaskName*/], function(){
+gulp.task("default", ['copy-fonts', sassConfig.compileSassTaskName, jsConfig.concatJsTaskName/*, imagesConfig.imagesTaskName*/], function(){
 
     // arrancar el servidor de browser sync
     browserSync.init({
