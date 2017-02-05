@@ -1,22 +1,63 @@
 $notice-cover-width: 500px;
 $news-author-width: 30px;
 
-
 .news-list {
 
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
+  .news-grid {
+    max-width: 1200px;
+    margin: 0;
+    background-color: gainsboro;
 
-  .news {
+    .news-detail {
 
-    .news-description {
+      .news-list-picture {
+      }
 
-      margin-top: 25px;
-      font-size: $font-size-large;
-      //@include text-overflow-ellipsis;
+      .news-list-body {
 
+        .news-list-tittle {
+          font-size: $font-size-xlarge;
+          margin-bottom: 25px;
+          font-weight: bold;
+          .tittle-text {
+            color: black;
+          }
+        }
+
+        .news-list-author {
+          display: flex;
+          align-items: center;
+          border: 30px;
+          box-sizing: border-box;
+          margin-bottom: 35px;
+
+          .author-img {
+            width: 40px;
+
+          }
+
+          .author-name {
+            font-size: $font-size-medium;
+            border-width: 0 15px 0 15px;
+          }
+
+          .author-postdate {
+
+            font-size: $font-size-medium;
+            border-right: 15px;
+
+          }
+
+        }
+
+        .news-list-resume {
+          font-size: $font-size-large;
+          margin-bottom: 25px;
+          .tittle-text {
+            color: grey
+          }
+        }
+      }
     }
   }
-
 }
