@@ -3,17 +3,26 @@ $news-author-width: 30px;
 
 .news-list {
 
+  width: 100%;
+
   .news-grid {
+    width: auto;
     max-width: 1200px;
-    margin: 0;
-    background-color: gainsboro;
+    background-color: rgba(222, 222, 222, 0.2);
+    margin: 0 auto;
+    margin-top: 30px;
 
     .news-detail {
 
+      height: 340px; //Com li dic que ocupi el màxim sense forçar a 300?
+
       .news-list-picture {
+        .cover{ max-width: 100%; max-height: 100%}
       }
 
       .news-list-body {
+
+        max-height: 400px;
 
         .news-list-tittle {
           font-size: $font-size-xlarge;
@@ -27,9 +36,8 @@ $news-author-width: 30px;
         .news-list-author {
           display: flex;
           align-items: center;
-          border: 30px;
           box-sizing: border-box;
-          margin-bottom: 35px;
+          margin-bottom: 20px;
 
           .author-img {
             width: 40px;
@@ -38,14 +46,21 @@ $news-author-width: 30px;
 
           .author-name {
             font-size: $font-size-medium;
-            border-width: 0 15px 0 15px;
+            margin: 0 15px 0 15px;
+            color: red;
+            font-weight: bold;
+
           }
 
           .author-postdate {
 
             font-size: $font-size-medium;
-            border-right: 15px;
 
+          }
+
+          .icon{
+            margin: 0 5px 0 10px;
+            padding-bottom: 5px;
           }
 
         }
